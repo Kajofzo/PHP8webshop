@@ -14,7 +14,7 @@ include 'assets/includes/connection.php';
       <nav>
         <ul>
           <li><a href="#">Home</a></li>
-          <li><a href="#">Producten</a></li>
+          <li><a href="/module8/phptest/php/assets/php/login.php">login</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
