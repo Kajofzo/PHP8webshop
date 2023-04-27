@@ -1,11 +1,20 @@
 <?php
+session_start();
 include "../../../assets/includes/connection.php"; 
+
+if (!isset($_SESSION['username'])) {
+    header("Location: ../security\L@kU6aIvM1eQh\login.php");
+    exit;
+}
+
 if ($data->setFetchMode(PDO::FETCH_ASSOC) > 0) {
     // output data of each row
     foreach ($data as $row) {
         echo $row['id'] . " " . $row['Merk'] . $row['Type'] . "<br>";
     }
 }
+
+
 ?>
 
 <!DOCTYPE html>

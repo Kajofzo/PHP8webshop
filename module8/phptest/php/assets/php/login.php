@@ -1,4 +1,5 @@
 <?php
+session_start();
 include '../includes/connection.php';
 
 
@@ -13,6 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Controleer of de ingevulde gebruikersnaam en wachtwoord overeenkomen met de verwachte waarden
     if ($username === "kaj" && $password === "kaj123") {
         // Doorsturen naar beveiligde pagina bij succesvolle inlog
+        $_SESSION['username'] = $username;
         header("Location: ../security\L@kU6aIvM1eQh\admin.php   ");
         exit;
     } else {
